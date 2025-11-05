@@ -25,5 +25,5 @@ npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch
 
 always check by doing git pull or sync 
 ```
-git pull
+git pull // for all
 ```
