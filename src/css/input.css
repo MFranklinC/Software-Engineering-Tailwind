@@ -1,12 +1,28 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
-@theme {
-  --color-bg: #fefae0;
-  --color-surface: #e9edc9;
-  --color-accent: #ccd5ae;
-  --color-hover: #faedcd;
-  --color-primary: #d4a373;
+
+@theme { 
+  --color-bg: #fefae0; 
+  --color-surface: #e9edc9; 
+  --color-accent: #ccd5ae; 
+  --color-hover: #faedcd; 
+  --color-primary: #d4a373; 
+
 }
+
+@theme ch4 {
+  --color-bg-ch4: #0d1321;        
+  --color-surface-ch4: #1d2d44;   
+  --color-accent-ch4: #3e5c76;   
+  --color-hover-ch4: #748cab;     
+  --color-primary-ch4: #f0ebd8;   
+
+  --gradient-ch4-1: linear-gradient(135deg, #0d1321 0%, #1d2d44 100%);
+  --gradient-ch4-2: linear-gradient(90deg, #1d2d44 0%, #3e5c76 50%, #f0ebd8 100%);
+  --gradient-ch4-3: linear-gradient(to right, #3e5c76 0%, #748cab 100%);
+}
+
 
 
 @layer components.index {
@@ -221,8 +237,6 @@
   }
 }
 
-
-
 /* === COMPONENT PLACEHOLDERS: CHAPTER NAMESPACES (EMPTY FOR DEV EXTENSION) ===
    These are intentionally empty / minimally defined so other devs can safely
    add styles under the respective namespace without risk of accidental styling
@@ -247,8 +261,56 @@
 }
 
 @layer components.ch4 {
-  /* Chapter 4 placeholder */
+  .ch4-header {
+    @apply sticky top-0 z-50 border-b border-accent-ch4/40 shadow-md backdrop-blur-md;
+    background: linear-gradient(135deg, var(--color-surface-ch4) 0%, var(--color-bg-ch4) 100%);
+  }
+
+  .ch4-header-inner {
+    @apply max-w-7xl mx-auto flex justify-between items-center px-6 py-4;
+  }
+
+  .ch4-brand {
+    @apply font-[Creepster] text-primary-ch4 text-3xl md:text-4xl tracking-widest;
+    text-shadow: 0 0 8px rgba(33, 78, 52, 0.7);
+  }
+
+  .ch4-menu-toggle {
+    @apply hidden;
+  }
+
+  .ch4-menu-btn {
+    @apply sm:hidden flex flex-col gap-1.5 cursor-pointer z-50;
+  }
+
+  .ch4-menu-bar {
+    @apply block w-6 h-0.5 bg-primary-ch4 transition-all;
+  }
+
+  .ch4-nav-links {
+    @apply hidden sm:flex gap-6 text-sm md:text-base font-medium;
+  }
+
+  .ch4-nav-links a {
+    @apply text-primary-ch4 hover:text-hover-ch4 transition-colors duration-200;
+  }
+
+  .ch4-nav-mobile {
+    @apply absolute top-full left-0 w-full border-t border-accent-ch4/30 hidden peer-checked:flex flex-col;
+    background: linear-gradient(180deg, var(--color-surface-ch4) 0%, var(--color-bg-ch4) 100%);
+  }
+
+  .ch4-nav-item {
+    @apply px-6 py-3 text-accent-ch4 hover:text-primary-ch4 transition-colors;
+    background: transparent;
+  }
+
+  
+
+  
 }
+
+
 
 @layer utilities {
   @keyframes typing {
