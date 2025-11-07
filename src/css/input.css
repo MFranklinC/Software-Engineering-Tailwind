@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@400..800&display=swap');
+
+
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
 
@@ -246,12 +249,127 @@
 */
 
 @layer components.ch1 {
-  /* Chapter 1 placeholder
-     Example use by other devs:
-     .ch1-section { @apply ... }
-     .ch1-heading { @apply ... }
-  */
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
+ /* ────────────── Sections & Containers ────────────── */
+
+.body{
+  @apply bg-[#FFF9E6]
+}
+ .ch1-section {
+  @apply max-w-7xl mx-auto space-y-12 mt-12 bg-[#FFF9E6];
+}
+
+.ch1-article {
+  @apply space-y-6 text-justify leading-relaxed text-[#3E352B] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl scroll-mt-10;
+}
+
+/* ────────────── Div Blocks ────────────── */
+.ch1-dv1 {
+  @apply bg-[#B57E4C] py-4 px-6 rounded-md shadow-sm text-center border-b-4 border-[#6A8F7C] text-[#FFF9E6];
+}
+
+.ch1-dv2 {
+  @apply absolute mt-2 p-4 bg-[#B57E4C] rounded-md shadow-lg hidden peer-checked:block min-w-[220px] z-10
+}
+
+.ch1-dv3 {
+  @apply space-y-3 text-justify leading-relaxed text-[#3E352B] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl;
+}
+
+.ch1-dv4 {
+  @apply space-y-3 leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl border-l-4 border-[#6A8F7C] pl-3 sm:pl-4 md:pl-5 lg:pl-6 xl:pl-8;
+}
+
+/* ────────────── Headings (h1–h5) ────────────── */
+.ch1-h1 {
+  @apply text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold italic text-[#3E352B] transform transition-transform duration-300 hover:-translate-y-1;
+}
+
+.ch1-h2 {
+  @apply text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold italic underline decoration-[#6A8F7C] underline-offset-3 text-[#3E352B];
+}
+
+.ch1-h3 {
+  @apply text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold italic mb-4 border-l-4 border-[#B57E4C] pl-4 text-[#3E352B];
+}
+
+.ch1-h4 {
+  @apply text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold italic mb-6 border-l-4 border-[#B57E4C] pl-4 text-[#3E352B] scroll-mt-10;
+}
+
+.ch1-h5 {
+  @apply text-center text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold italic text-[#6A8F7C] mt-2;
+}
+
+/* ────────────── Paragraphs & Text ────────────── */
+.ch1-p {
+  @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
+}
+
+.ch1-p1 {
+  @apply pl-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-5 mb-5 font-semibold text-[#3E352B];
+}
+
+.ch1-bp {
+  @apply first-letter:text-2xl sm:first-letter:text-3xl md:first-letter:text-4xl lg:first-letter:text-5xl xl:first-letter:text-6xl first-letter:font-bold first-letter:mr-2 first-letter:text-[#B57E4C] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
+}
+
+/* ────────────── Lists (ul, ol, li) ────────────── */
+.ch1-ul1 {
+  @apply list-disc pl-5 sm:pl-6 md:pl-6 lg:pl-6 xl:pl-8 space-y-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
+}
+
+.ch1-ul2 {
+  @apply space-y-1 list-disc list-inside text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
+}
+
+.ch1-ul3 {
+  @apply list-disc pl-6 space-y-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
+}
+
+.ch1-ol {
+  @apply list-decimal pl-6 sm:pl-8 md:pl-10 lg:pl-10 xl:pl-12 space-y-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
+}
+
+.ch1-li {
+  @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
+}
+
+/* ────────────── Buttons & Navigation ────────────── */
+.ch1-btn1 {
+  @apply bg-[#B57E4C] text-[#FFF9E6] font-semibold py-2 px-6 rounded-md shadow
+         hover:bg-[#8f846a] transition-colors duration-200
+         text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl cursor-pointer select-none block;
+}
+
+
+.ch1-nav {
+  @apply hover:text-[#523113] hover:underline text-[#3E352B];
+}
+
+
+.ch1-nav1 {
+  @apply text-[#B57E4C] underline font-semibold;
+}
+
+/* ────────────── Images ────────────── */
+.ch1-imgage {
+  @apply w-full max-w-xl lg:max-w-3xl rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 mx-auto;
+}
+
+/* ────────────── Back to Top Button ────────────── */
+.ch1-backtotp {
+  @apply fixed bottom-5 right-5 bg-[#B57E4C] hover:bg-[#6A8F7C] text-[#FFF9E6] font-bold py-3 px-4 rounded-full shadow-lg transition-transform duration-300 transform hover:-translate-y-1 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl;
+}
+
+}
+
+
 
 @layer components.ch2 {
   /* Chapter 2 placeholder */
