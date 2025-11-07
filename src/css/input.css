@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
 
 @theme { 
   --color-bg: #fefae0; 
@@ -22,6 +22,7 @@
   --gradient-ch4-2: linear-gradient(90deg, #1d2d44 0%, #3e5c76 50%, #f0ebd8 100%);
   --gradient-ch4-3: linear-gradient(to right, #3e5c76 0%, #748cab 100%);
 }
+
 
 
 
